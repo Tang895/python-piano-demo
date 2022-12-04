@@ -13,7 +13,7 @@ def play():
 # window = QMainWindow()
 # window.resize(600,600)
 # window.move(300,310)
-# window.setWindowTitle("唐义军")
+# window.setWindowTitle("piano")
 # textEdit = QPlainTextEdit(window)
 # textEdit.setPlaceholderText("输入")
 # textEdit.move(300,25)
@@ -29,15 +29,15 @@ def play():
 class Guitar():
     def __init__(self):
         mixer.init()
-        C=mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/Yamaha/C.wav")
-        D = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/Yamaha/D.wav")
-        G = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/Yamaha/G.wav")
-        Em = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/Yamaha/Em.wav")
-        Am = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/Yamaha/Am.wav")
-        Bm7 = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/Yamaha/Bm7.wav")
+        C=mixer.Sound("./Yamaha/C.wav")
+        D = mixer.Sound("./Yamaha/D.wav")
+        G = mixer.Sound("./Yamaha/G.wav")
+        Em = mixer.Sound("./Yamaha/Em.wav")
+        Am = mixer.Sound("./Yamaha/Am.wav")
+        Bm7 = mixer.Sound("./Yamaha/Bm7.wav")
 
        # 添加ui文件
-        qfile = QFile("C:/Users/ian/PycharmProjects/piano_copy/ui/guitar.ui")
+        qfile = QFile("./ui/guitar.ui")
         qfile.open(QFile.ReadOnly)
         qfile.close()
         self.window = QUiLoader().load(qfile)
@@ -95,19 +95,19 @@ class Guitar():
 class Piano1():
     def __init__(self):
         mixer.init()
-        one = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_High/1.wav")
-        b_two = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_High/b2.wav")
-        two = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_High/2.wav")
-        b_three = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_High/b3.wav")
-        three = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_High/3.wav")
-        four = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_High/4.wav")
-        b_five = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_High/b5.wav")
-        five = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_High/5.wav")
-        b_six = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_High/b6.wav")
-        six = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_High/6.wav")
-        b_seven = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_High/b7.wav")
-        seven = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_High/7.wav")
-        oneone = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_High/11.wav")
+        one = mixer.Sound("./piano_High/1.wav")
+        b_two = mixer.Sound("./piano_High/b2.wav")
+        two = mixer.Sound("./piano_High/2.wav")
+        b_three = mixer.Sound("./piano_High/b3.wav")
+        three = mixer.Sound("./piano_High/3.wav")
+        four = mixer.Sound("./piano_High/4.wav")
+        b_five = mixer.Sound("./piano_High/b5.wav")
+        five = mixer.Sound("./piano_High/5.wav")
+        b_six = mixer.Sound("./piano_High/b6.wav")
+        six = mixer.Sound("./piano_High/6.wav")
+        b_seven = mixer.Sound("./piano_High/b7.wav")
+        seven = mixer.Sound("./piano_High/7.wav")
+        oneone = mixer.Sound("./piano_High/11.wav")
         #按钮
         def click_one():
             one.play()
@@ -136,7 +136,7 @@ class Piano1():
         def click_oneone():
             oneone.play()
         #添加ui文件
-        qfile= QFile("C:/Users/ian/PycharmProjects/piano_copy/ui/piano.ui")
+        qfile= QFile("./ui/piano.ui")
         qfile.open(QFile.ReadOnly)
         qfile.close()
         self.ui=QUiLoader().load(qfile)
@@ -157,19 +157,19 @@ class Piano1():
 class Piano2():
     def __init__(self):
         # 低声部
-        lone = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_low/1.wav")
-        lb_two = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_low/b2.wav")
-        ltwo = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_low/2.wav")
-        lb_three = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_low/b3.wav")
-        lthree = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_low/3.wav")
-        lfour = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_low/4.wav")
-        lb_five = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_low/b5.wav")
-        lfive = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_low/5.wav")
-        lb_six = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_low/b6.wav")
-        lsix = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_low/6.wav")
-        lb_seven = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_low/b7.wav")
-        lseven = mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_low/7.wav")
-        loneone=mixer.Sound("C:/Users/ian/PycharmProjects/piano_copy/piano_low/11.wav")
+        lone = mixer.Sound("./piano_low/1.wav")
+        lb_two = mixer.Sound("./piano_low/b2.wav")
+        ltwo = mixer.Sound("./piano_low/2.wav")
+        lb_three = mixer.Sound("./piano_low/b3.wav")
+        lthree = mixer.Sound("./piano_low/3.wav")
+        lfour = mixer.Sound("./piano_low/4.wav")
+        lb_five = mixer.Sound("./piano_low/b5.wav")
+        lfive = mixer.Sound("./piano_low/5.wav")
+        lb_six = mixer.Sound("./piano_low/b6.wav")
+        lsix = mixer.Sound("./piano_low/6.wav")
+        lb_seven = mixer.Sound("./piano_low/b7.wav")
+        lseven = mixer.Sound("./piano_low/7.wav")
+        loneone=mixer.Sound("./piano_low/11.wav")
         def click_lone():
             lone.play()
         def click_lb_two():
@@ -197,7 +197,7 @@ class Piano2():
         def click_loneone():
             loneone.play()
         # 添加ui文件
-        qfile = QFile("C:/Users/ian/PycharmProjects/piano_copy/ui/piano2.ui")
+        qfile = QFile("./ui/piano2.ui")
         qfile.open(QFile.ReadOnly)
         qfile.close()
         self.ui = QUiLoader().load(qfile)
@@ -230,7 +230,7 @@ class Piano2():
 class main_W():
     def __init__(self):
         # 添加ui文件
-        qfile = QFile("C:/Users/ian/PycharmProjects/piano_copy/ui/main.ui")
+        qfile = QFile("./ui/main.ui")
         qfile.open(QFile.ReadOnly)
         qfile.close()
         self.ui = QUiLoader().load(qfile)
